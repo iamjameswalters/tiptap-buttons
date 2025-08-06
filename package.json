@@ -1,0 +1,20 @@
+{
+  "name": "tiptap-buttons",
+  "version": "1.0.0",
+  "description": "TipTap extension for customizable buttons",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "vite --config demo/vite.config.js",
+    "build": "vite build --config demo/vite.config.js",
+    "preview": "vite preview --config demo/vite.config.js"
+  },
+  "dependencies": {
+    "@tiptap/core": "^2.1.0",
+    "@tiptap/pm": "^2.1.0",
+    "@tiptap/starter-kit": "^2.1.0",
+    "@tiptap/extension-link": "^2.1.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

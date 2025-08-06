@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TipTap Button Extension Demo</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    #editor {
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      padding: 16px;
+      min-height: 300px;
+      margin: 20px 0;
+    }
+    
+    .controls {
+      background: #f5f5f5;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+    
+    .control-group {
+      margin: 10px 0;
+    }
+    
+    label {
+      display: inline-block;
+      width: 120px;
+      font-weight: bold;
+    }
+    
+    input[type="text"], input[type="url"], input[type="color"] {
+      width: 200px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    button {
+      background: #007cba;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    
+    button:hover {
+      background: #005a87;
+    }
+    
+    .ProseMirror {
+      outline: none;
+    }
+    
+    .ProseMirror div[data-type="custom-button"] {
+      text-align: center;
+      margin: 16px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>TipTap Button Extension Demo</h1>
+  
+  <div class="controls">
+    <h3>Add Custom Button</h3>
+    <div class="control-group">
+      <label for="button-href">Link URL:</label>
+      <input type="url" id="button-href" placeholder="https://example.com" value="https://google.com">
+    </div>
+    <div class="control-group">
+      <label for="button-label">Button Label:</label>
+      <input type="text" id="button-label" placeholder="Button Text" value="Click Me">
+    </div>
+    <div class="control-group">
+      <label for="button-color">Background:</label>
+      <input type="color" id="button-color" value="#556270">
+    </div>
+    <div class="control-group">
+      <label for="button-text-color">Text Color:</label>
+      <input type="color" id="button-text-color" value="#ffffff">
+    </div>
+    <div class="control-group">
+      <label for="button-border-color">Border Color:</label>
+      <input type="color" id="button-border-color" value="#1e3650">
+    </div>
+    <div class="control-group">
+      <button onclick="addButton()">Add Button to Editor</button>
+    </div>
+  </div>
+
+  <div id="editor"></div>
+
+  <script type="module" src="/demo/index.js"></script>
+</body>
+</html>
